@@ -22,7 +22,7 @@ Backend:
 
 ```
 cd spotify
-composer instal
+composer install
 php -S localhost:8000 -t public
 (runnning at port 8000)
 ```
