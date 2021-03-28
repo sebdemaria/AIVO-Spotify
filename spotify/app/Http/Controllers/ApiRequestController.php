@@ -34,7 +34,12 @@ class ApiRequestController extends Controller
 
             $band_discography = $this->spotify->formatRequest($band_name, $final_token);
 
-            var_dump($band_discography);
+            //retornamos el listado de albumes en JSON
+            echo json_encode($band_discography, JSON_PRETTY_PRINT);
+
+            //dejo comentado un var dump para visualizar la respuesta mas ordenada
+//            var_dump($band_discography);
+
 
         }catch (Exception $e){
 

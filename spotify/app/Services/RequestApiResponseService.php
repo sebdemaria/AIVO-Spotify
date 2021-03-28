@@ -23,11 +23,19 @@ class RequestApiResponseService
 
         $band_discography = array();
 
-        $albums = $this->bandDiscography->getBandFullDiscographyByBandName($band_name, 'album', $token);
+        $response = $this->bandDiscography->getBandFullDiscographyByBandName($band_name, $token);
+
+        if ($response->failed())
+            throw new Exception('HTTP ERROR STATUS 400 - BAD REQUEST');
+
+        elseif ($response->serverError())
+            throw new Exception('HTTP ERROR STATUS 500 - SERVER ERROR');
+
+        $albums = json_decode($response)->albums->items;
 
         //check if response returns empty
         if (empty($albums))
-            throw new Exception('ERROR: Data not available or non existent artist');
+            throw new Exception('ERROR: HTTP ERROR STATUS 400 (BAD REQUEST) - Data not available or non existent artist');
 
         foreach ($albums as $album){
 
