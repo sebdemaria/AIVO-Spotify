@@ -1,21 +1,41 @@
-# Lumen PHP Framework
+# AIVO - Spotify Challenge
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+  - [Instalación](#instalacion)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+  - [Tecnologias utilizadas](#Tecnologias)
+  - [Back end](#back-end)
 
-## Official Documentation
+[Comentarios](#comentarios)
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Security Vulnerabilities
+### Instalación
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Clonarlo:
 
-## License
+```
+git clone https://github.com/sebdemaria/AIVO-Spotify
+```
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Back end
+
+Backend:
+
+```
+cd spotify
+composer instal
+php -S localhost:8000 -t public
+(runnning at port 8000)
+```
+Para acceder al sitio usar http://localhost:8000/api/v1/albums?q= NOMBRE DE LA BANDA
+
+## Tecnologias
+
+### Back End
+```
+PHP 7.2, Lumen 7.0
+```
+
+# Comentarios
+
+Se utilizo el HTTP Client de lumen para realizar las validaciones de HTTP STATUS CODE.
+Se diseño el sitio con el patrón SERVICE-ADAPTER.
