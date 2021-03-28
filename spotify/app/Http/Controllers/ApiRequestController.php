@@ -25,6 +25,9 @@ class ApiRequestController extends Controller
     {
         try {
 
+            if (!($request->q))
+                throw new Exception( 'ERROR: HTTP ERROR STATUS 400 (BAD REQUEST)- Artist Parameter Required');
+
             $band_name = $request->q;
 
             $final_token = $this->token->getAuthToken();

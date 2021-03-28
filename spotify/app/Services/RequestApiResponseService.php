@@ -27,7 +27,7 @@ class RequestApiResponseService
 
         //check if response returns empty
         if (empty($albums))
-            throw new Exception('ERROR: Data not available or invalid artist');
+            throw new Exception('ERROR: Data not available or non existent artist');
 
         foreach ($albums as $album){
 
